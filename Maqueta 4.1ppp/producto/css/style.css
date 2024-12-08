@@ -1,0 +1,346 @@
+/* Descripción colores
+Las letras al final significan D=Diurno N=Nocturno DC=diurno contraste y NC=nocturno contraste 
+Si un color se utiliza en varias se vera como DN por ejemplo*/
+:root{
+    --Blanco:#ffffff;
+    --Negro: #000000;
+    --Gris:#505050;
+    --Rosa: #eba4a4;
+    --Rojo: #d80000;
+    font-size: 12pt;
+  --font-size-base: 1rem; /* Tamaño base del body */
+  --font-size-step: 0.125rem; /* Incrementos de tamaño (2px equivalente en rem) */
+}
+
+.light-mode{
+    --Blanco:#ffffff;
+    --Negro: #000000;
+    --Gris:#505050;
+    --Rosa: #eba4a4;
+    --Rojo: #d80000;
+}
+
+.dark-mode{
+    --Blanco:#000000;
+    --Negro: #ffffff;
+    --Gris:#f5f5dc;
+    --Rosa: #82c982;
+    --Rojo: #6bb16c;
+}
+
+/* Botones */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 0.6rem;
+    cursor: pointer;
+    background-color: var(--Rosa);
+    color: var(--Negro);
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: var(--Blanco);
+  }
+
+
+img{
+    width: 4rem;
+}
+body{
+    background-color:var(--Blanco);
+}
+/* Encabezado */
+header{
+    background-color: var(--Gris);
+    color: var(--Blanco);
+    padding: 0.1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+ header .ofertas {
+    flex: 1;
+    text-align: center;
+    font-family: "Simonetta", serif;
+    font-size: 0.7rem;   
+}
+.cambiocolor, .colorcons{
+    padding: 0.3rem 0.1rem;
+}
+.cambiocolor img {
+    width: 2rem;
+}
+
+
+/* Nav */
+
+.menu-nav {
+    background-color: var(--Blanco);
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Logo y Menú a la izquierda */
+.logo-nav {
+    display: flex;
+    align-items: center;
+    animation: spinVertical 8s linear infinite; /* Gira continuamente en 8 segundos */
+    transform-origin: center; /* Establece el punto de giro en el centro */
+}
+/* Animación de giro en el eje Y (derecha a izquierda) */
+@keyframes spinVertical {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.logo-nav img {
+    width: 3rem;
+    height: auto;
+    margin-right: 1rem; 
+}
+
+
+/* Menú horizontal alineado a la izquierda, junto al logo */
+.menu-horizontal {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de los elementos del menú */
+.menu-horizontal li {
+    font-family: "Simonetta", cursive;
+    margin: 0 1rem;
+    color: var(--Negro);
+    font-size: var(--font-size-base);
+}
+
+/* Iconos a la derecha */
+.iconos-nav {
+    display: flex;
+    margin-left: auto; 
+}
+
+.iconos-nav .Icono {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+
+/* Aside */
+
+
+/* Contenedor principal */
+.main-contenido {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 1rem;
+    margin: 1rem;
+}
+.main-contenido p{
+    font-family: "Alex Brush", serif;
+    color: var(--Negro);
+}
+.main-contenido h2{
+    font-family: "Simonetta", cursive;
+    color: var(--Negro);
+}
+
+
+/* Main vinilo-izq ocupa la primera columna */
+.vinilo-izq {
+    grid-column: 2; 
+}
+
+/* Aside ocupa la segunda columna */
+aside {
+    grid-column: 1; 
+}
+
+ul.menu-dudas {
+    display: flex;               
+    gap: 1rem;                   
+    list-style-type: none;       
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu-dudas li {
+    background-color: var(--Blanco);   
+    border: 1px solid var(--Rojo);      
+    border-radius: 0.313rem;          
+    padding: 0.188rem 0.313rem;          
+    text-align: center;          
+    font-size:  var(--font-size-base);              
+    font-family: "Simonetta", cursive;
+    color: var(--Negro);
+}
+
+ul.menu-dudas li:hover {
+    background-color: var(--Negro);   
+    cursor: pointer;             
+}
+
+ul.menu-tamaño li {
+    font-size: var(--font-size-base);            
+    padding: 0.313rem;   
+    font-family: "Simonetta", cursive;             
+}
+
+ul.menu-tamaño {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 5 0 0.313rem 0; 
+    color: var(--Rojo);
+}
+
+ul.menu-tallas {
+    list-style-type: none;
+    display: flex;
+    gap: 0.625rem; 
+    padding: 0;
+    margin: 0; 
+    font-family: "Simonetta", cursive;
+    color: var(--Negro);
+}
+/* Estilos para el botón de "AGREGAR AL CARRITO" */
+p.carrito {
+    background-color: var(--Rosa);        
+    color: var(--Negro);                   
+    text-align: center;             
+    padding: 0.625rem 1.25rem;           
+    border-radius: 0.313rem;             
+    font-size: var(--font-size-base);                
+    cursor: pointer;                
+    max-width: 12.5rem;               
+    margin: 0.625rem auto;    
+    font-family: "Simonetta", cursive;          
+}
+
+
+
+/* Main sugirió ocupa toda la fila debajo */
+.sugirió {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: "Alex Brush", serif;
+    color: var(--Rojo);
+}
+
+/* Distribución de las imágenes en el contenedor */
+.sugirió section {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1rem;                      
+}
+
+/* Estilo para las imágenes dentro de .sugirió */
+.sugirió img {
+    flex: 1;                
+    max-width: 30%;        
+    max-height: 5%;           
+    border-radius: 0.5rem;     
+}
+
+
+
+.imagen-principal {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.imagen-secundaria {
+    display: flex;
+    justify-content: center; 
+    gap: 0.625rem;               
+}
+
+.imagen-secundaria img {
+    width: 6.25rem;            
+    height: auto;
+    border-radius: 0.313rem;      
+}
+
+/* Estilo para el footer */
+
+footer {
+    background-color: var(--Negro);
+    background-size: cover;
+    background-position: 1em;
+    margin-top: 0.625rem 0;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+footer p.Titulo{
+    font-size: var(--font-size-base);
+    margin-bottom: 0.625rem;
+    color: var(--Blanco);
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li{
+    margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+    color:var(--Rosa);
+    text-decoration: none;
+}
+
+@media (min-width: 912px), (min-width:576px) and (orientation:landscape){
+    
+    .main-contenido{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    footer div{
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    footer div:nth-child(1),
+    footer div:nth-child(3){
+        grid-column: 1;
+    }
+
+    footer div:nth-child(2){
+        grid-column: 2;
+    }
+}
+
+
