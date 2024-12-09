@@ -1,0 +1,282 @@
+/* Descripción colores
+Las letras al final significan D=Diurno N=Nocturno DC=diurno contraste y NC=nocturno contraste 
+Si un color se utiliza en varias se vera como DN por ejemplo*/
+:root{
+    --Blanco:#ffffff;
+    --Negro: #000000;
+    --Gris:#505050;
+    --Rosa: #eba4a4;
+    --Rojo: #d80000;
+    font-size: 12pt;
+    --font-size-base: 1rem; /* Tamaño base del body */
+    --font-size-step: 0.125rem; /* Incrementos de tamaño (2px equivalente en rem) */
+}
+
+.light-mode{
+    --Blanco:#ffffff;
+    --Negro: #000000;
+    --Gris:#505050;
+    --Rosa: #eba4a4;
+    --Rojo: #d80000;
+}
+
+.dark-mode{
+    --Blanco:#000000;
+    --Negro: #ffffff;
+    --Gris:#f5f5dc;
+    --Rosa: #82c982;
+    --Rojo: #6bb16c;
+}
+
+/* Botones */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 0.6rem;
+    cursor: pointer;
+    background-color: var(--Rosa);
+    color: var(--Negro);
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: var(--Blanco);
+  }
+
+
+/* Encabezado */
+
+header {
+    background-size: cover;
+    background-position: center;
+    background-color: var(--Blanco);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 9.375rem;
+}
+
+.cambiocolor, .colorcons{
+    padding: 0.3rem 0.1rem;
+}
+.cambiocolor img {
+    width: 2rem;
+}
+
+.dark-mode .icono-luna{
+    filter: invert(100%);
+}
+.dark-mode .Icono{
+    filter: invert(100%);
+}
+
+
+/* Nombre marca izquierda header */
+
+.nombre-marca p{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 2rem;
+    margin: 0;
+    padding-left: 1rem;
+    color: var(--Negro);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* icono marca */
+
+header .logo-header {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+
+@keyframes spinVertical {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Aplica la animación al logo */
+header .logo-header img {
+    animation: spinVertical 8s linear infinite; /* Gira continuamente en 8 segundos */
+    width: 5rem;
+    height: auto;
+    border: none;
+    transform-origin: center; /* Establece el punto de giro en el centro */
+}
+
+/* Iconos usuario-compra */
+
+header .header-icons img {
+    font-size: 1.5rem;
+}
+.Icono{
+    width: 1.875rem;
+    height: 1.875rem;
+    margin-right: 0.9375rem;
+}
+/* nav */
+
+.menu-debajo{
+    background-color: var(--Gris);
+    color: var(--Blanco);
+    padding: 0.1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.menu-horizontal{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+.menu-horizontal li{
+    margin: 0 1.25rem;
+    color: var(--Blanco);
+    font-size: 1.7rem;
+}
+.menu-horizontal li a:hover {
+    color:var(--Gris);
+}
+
+/* categorias aside */
+
+.main-categoria {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    background-color: var(--Blanco);
+    color: var(--Negro);
+    padding: 1.25rem;
+    width: 12.5rem;
+    height: auto;
+}
+
+aside h2 {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 0.9375rem;
+    font-size: 1.2em;
+}
+
+aside ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* main fotos-ropa */
+
+.main-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    width: calc(100% - 13rem);
+    background-color: var(--Blanco);
+}
+
+.main-contenido section {
+    text-align: center;
+}
+
+.main-contenido img {
+    width: 100%;
+    height: 35rem;
+    border-radius: 0.625rem;
+}
+ 
+/* Dentro del main para darle estilo al precio debajo de la imagen */
+
+.main-contenido p {
+    margin: 0.625rem 0;
+    font-size: 1.1em;
+    color: var(--Gris);
+}
+
+.main-contenido p.precio {
+    font-weight: bold;
+    color: var(--Rojo);
+}
+
+
+/* Estilo para el footer */
+
+footer {
+    background-color: var(--Negro);
+    color: var(--Rosa);
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+}
+
+
+.titulo-footer {
+    font-size: 1.8em;
+    margin-bottom: 0.625rem;   
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+    color: var(--Rosa);
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+}
+.redes-sociales{
+    width: 1.875rem;
+    height: 1.875rem;
+    cursor: pointer;
+}
+@media (min-width: 912px), (min-width:576px) and (orientation:landscape){
+    
+    .catalogo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1rem;
+    }
+
+    .producto {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
